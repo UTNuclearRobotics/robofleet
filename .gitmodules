@@ -10,3 +10,7 @@
 	path = robofleet_client
 	url = https://github.com/UTNuclearRobotics/robofleet_client.git
 	branch = master
+[submodule "robofleet_server"]
+	path = robofleet_server
+	url = https://github.com/UTNuclearRobotics/robofleet_server.git
+	branch = master
