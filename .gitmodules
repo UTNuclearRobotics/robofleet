@@ -10,3 +10,6 @@
 [submodule "msg2fbs/flatbuffers"]
 	path = msg2fbs/flatbuffers
 	url = https://github.com/google/flatbuffers
+[submodule "robofleet_client"]
+	path = robofleet_client
+	url = git@github.com:UTNuclearRobotics/robofleet_client.git
