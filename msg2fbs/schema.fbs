@@ -118,6 +118,27 @@ table VisualizationMsg {
   lines:[fb.amrl_msgs.ColoredLine2D] (required);
   arcs:[fb.amrl_msgs.ColoredArc2D] (required);
 }
+namespace fb.sensor_msgs;
+table CompressedImage {
+  __metadata:fb.MsgMetadata;
+  header:fb.std_msgs.Header (required);
+  format:string (required);
+  data:[uint8] (required);
+}
+namespace fb.amrl_msgs;
+table DetectedItem {
+  __metadata:fb.MsgMetadata;
+  name:string (required);
+  repID:string (required);
+  anchorID:string (required);
+  x:float64;
+  y:float64;
+  z:float64;
+  lat:float64;
+  lon:float64;
+  elv:float64;
+  cmpr_image:fb.sensor_msgs.CompressedImage (required);
+}
 namespace fb.sensor_msgs.NavSatStatusConstants;
 enum status_no_fix : int8 { value = -1 }
 enum status_fix : int8 { value = 0 }
@@ -162,13 +183,6 @@ table LaserScan {
   range_max:float32;
   ranges:[float32] (required);
   intensities:[float32] (required);
-}
-namespace fb.sensor_msgs;
-table CompressedImage {
-  __metadata:fb.MsgMetadata;
-  header:fb.std_msgs.Header (required);
-  format:string (required);
-  data:[uint8] (required);
 }
 namespace fb.sensor_msgs.PointFieldConstants;
 enum int8 : uint8 { value = 1 }

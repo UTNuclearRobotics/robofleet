@@ -6,9 +6,10 @@ MSG_TYPES=\
 	amrl_msgs/ElevatorCommand\
 	amrl_msgs/Localization2DMsg\
 	amrl_msgs/VisualizationMsg\
+	amrl_msgs/DetectedItem\
+	sensor_msgs/CompressedImage\
 	sensor_msgs/NavSatFix\
 	sensor_msgs/LaserScan\
-	sensor_msgs/CompressedImage\
 	sensor_msgs/PointCloud2\
 	std_msgs/String\
 	geometry_msgs/PoseStamped\
@@ -16,7 +17,7 @@ MSG_TYPES=\
 # this line intentionally left blank
 
 # change this if your ROS install uses python 3
-PYTHON?=/usr/bin/python2
+PYTHON?=/usr/bin/python
 
 # if you have flatbuffers installed, you can change this path
 FLATC?=build/flatbuffers/flatc
